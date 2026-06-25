@@ -1,0 +1,1059 @@
+{
+    "transactions": [
+        {
+            "tid": "6a3d5aca4304e8b721c860a0",
+            "transactionId": "19d8f133-77a0-4045-98ae-2fbc267f3089",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.023",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405833269,
+            "modifiedDateTime": 1782405833292
+        },
+        {
+            "tid": "6a3d5ac94304e8b721c8609f",
+            "transactionId": "164b65ec-dfbe-4186-b188-ebda17060b49",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.019",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405832607,
+            "modifiedDateTime": 1782405832626
+        },
+        {
+            "tid": "6a3d5ac84304e8b721c8609e",
+            "transactionId": "20d1f501-2eb9-417f-80a9-12541f9884d9",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.026",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405831722,
+            "modifiedDateTime": 1782405831748
+        },
+        {
+            "tid": "6a3d5ac74304e8b721c8609d",
+            "transactionId": "b1a2d72b-9b00-4627-8c3b-18f2e429b781",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.021",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405830854,
+            "modifiedDateTime": 1782405830875
+        },
+        {
+            "tid": "6a3d5ac74304e8b721c8609c",
+            "transactionId": "f1b23fbc-565d-42d5-a0e1-57d12d119a08",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.021",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405830102,
+            "modifiedDateTime": 1782405830123
+        },
+        {
+            "tid": "6a3d5ac64304e8b721c8609b",
+            "transactionId": "c9777b0d-c997-45a2-a587-cb54fd5c1f09",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.026",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405829298,
+            "modifiedDateTime": 1782405829324
+        },
+        {
+            "tid": "6a3d5ac54304e8b721c8609a",
+            "transactionId": "eb99fbcb-10c4-4bdc-bd95-b14439077863",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.023",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405828564,
+            "modifiedDateTime": 1782405828587
+        },
+        {
+            "tid": "6a3d5ac44304e8b721c86099",
+            "transactionId": "228bb5f9-884f-4d4b-a13c-0d5eb3f81cf6",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.022",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405827774,
+            "modifiedDateTime": 1782405827796
+        },
+        {
+            "tid": "6a3d5ac34304e8b721c86098",
+            "transactionId": "492e423b-acfc-4e18-a4d2-ff2e09a0a909",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.031",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405826955,
+            "modifiedDateTime": 1782405826986
+        },
+        {
+            "tid": "6a3d5ac24304e8b721c86097",
+            "transactionId": "1eac5916-91b8-4c12-8831-3de15fc70ffe",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.029",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405825876,
+            "modifiedDateTime": 1782405825905
+        },
+        {
+            "tid": "6a3d5ac14304e8b721c86096",
+            "transactionId": "1cbde032-e62d-4d65-ba21-b05a87db27de",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.048",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405824020,
+            "modifiedDateTime": 1782405824068
+        },
+        {
+            "tid": "6a3d5ab54304e8b721c86094",
+            "transactionId": "2ec08c96-682e-4aa6-bfb1-bb457936b208",
+            "serviceName": "get-quote",
+            "status": "COMPLETED_WITH_ERRORS",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.006",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "403",
+            "integrationFlowInvoked": false,
+            "changed": false,
+            "creationDateTime": 1782405812887,
+            "modifiedDateTime": 1782405812893
+        },
+        {
+            "tid": "6a3d5aac4304e8b721c86090",
+            "transactionId": "1c440437-6116-4299-9b1d-6b02ef9d6005",
+            "serviceName": "get-quote",
+            "status": "COMPLETED_WITH_ERRORS",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.633",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "PCloud Dedicated 2",
+            "clusterRefId": "c0be9a1a30f445f59e6d2438d20d34b3",
+            "clusterType": "PRIVATE_CLOUD",
+            "baseTag": "EMPTY",
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "10.129.146.91",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "403",
+            "integrationFlowInvoked": false,
+            "changed": false,
+            "creationDateTime": 1782405803488,
+            "modifiedDateTime": 1782405804121
+        },
+        {
+            "tid": "6a3d5a3c4304e8b721c8608a",
+            "transactionId": "6ddb9945-6456-488f-9de1-a8132a0259fb",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.027",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405691532,
+            "modifiedDateTime": 1782405691559
+        },
+        {
+            "tid": "6a3d5a3b4304e8b721c86089",
+            "transactionId": "6486ce0c-de13-473c-893b-ceae7f50bb0f",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.027",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405690586,
+            "modifiedDateTime": 1782405690613
+        },
+        {
+            "tid": "6a3d5a3a4304e8b721c86088",
+            "transactionId": "eca05fa0-f52d-4f69-bef9-86ee30b9f953",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.030",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405689544,
+            "modifiedDateTime": 1782405689574
+        },
+        {
+            "tid": "6a3d5a384304e8b721c86087",
+            "transactionId": "d6308d2f-182b-45ad-8602-8b2cb7620fa2",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.032",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405688163,
+            "modifiedDateTime": 1782405688195
+        },
+        {
+            "tid": "6a3d5a374304e8b721c86085",
+            "transactionId": "890d2bbe-ba59-4bd3-8f03-ccdbc26532aa",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.032",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405687060,
+            "modifiedDateTime": 1782405687092
+        },
+        {
+            "tid": "6a3d5a364304e8b721c86083",
+            "transactionId": "70e5f2d5-e726-4d9d-b476-e0e0cadaea1e",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.031",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405685977,
+            "modifiedDateTime": 1782405686008
+        },
+        {
+            "tid": "6a3d5a354304e8b721c86082",
+            "transactionId": "b2e9b1d8-9325-4243-a826-8f9fdc067657",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.037",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405685019,
+            "modifiedDateTime": 1782405685056
+        },
+        {
+            "tid": "6a3d5a344304e8b721c86081",
+            "transactionId": "4588b988-f02e-4dce-8b57-10f23768da9e",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.036",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405684019,
+            "modifiedDateTime": 1782405684055
+        },
+        {
+            "tid": "6a3d5a334304e8b721c8607f",
+            "transactionId": "b02b4ac8-e446-4309-ab0b-2779ee9c2c0d",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.038",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405682977,
+            "modifiedDateTime": 1782405683015
+        },
+        {
+            "tid": "6a3d5a324304e8b721c8607e",
+            "transactionId": "7de11c6b-3133-4d2e-9cfe-339058fc0cbe",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.035",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405682036,
+            "modifiedDateTime": 1782405682071
+        },
+        {
+            "tid": "6a3d5a314304e8b721c8607d",
+            "transactionId": "3fd33ed2-0620-4cff-a2f1-a8a421283e67",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.032",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405681145,
+            "modifiedDateTime": 1782405681177
+        },
+        {
+            "tid": "6a3d5a304304e8b721c8607c",
+            "transactionId": "1cfa86e6-d759-4a21-94dc-1ee968debc43",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.036",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405680208,
+            "modifiedDateTime": 1782405680244
+        },
+        {
+            "tid": "6a3d5a2f4304e8b721c8607b",
+            "transactionId": "52bc949b-c2bc-4d8d-a9dc-e5648a378bfa",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.037",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405679219,
+            "modifiedDateTime": 1782405679256
+        },
+        {
+            "tid": "6a3d5a2f4304e8b721c8607a",
+            "transactionId": "3471e1aa-ef48-4f8a-9bff-eb729225708b",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.038",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405678303,
+            "modifiedDateTime": 1782405678341
+        },
+        {
+            "tid": "6a3d5a2e4304e8b721c86079",
+            "transactionId": "12e6a24e-b3ca-4914-bf48-a10d870a73a5",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.038",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405677325,
+            "modifiedDateTime": 1782405677363
+        },
+        {
+            "tid": "6a3d5a2c4304e8b721c86078",
+            "transactionId": "815abf6f-af86-4d74-bac1-3c2efc3f3246",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.092",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405675989,
+            "modifiedDateTime": 1782405676081
+        },
+        {
+            "tid": "6a3d59b44304e8b721c8606e",
+            "transactionId": "c202795f-2d41-40bb-8cf9-8cd4c05ea6d8",
+            "serviceName": "get-quote",
+            "status": "COMPLETED",
+            "serviceId": "20efd7fb-b934-43eb-a87b-47a380111130",
+            "projectName": "scopetest",
+            "projectId": "f13b7542-3a67-478e-af0a-6af1b25d5f2c",
+            "runtime": "",
+            "responsetime": "00:00:00.109",
+            "hasWarning": false,
+            "isEvent": true,
+            "clusterName": "Shared Data Plane",
+            "clusterRefId": "306e2d57b8ac4ef9b6acb6e06b8a07b8",
+            "clusterType": "MANAGED_SHARED",
+            "baseTag": "EMPTY",
+            "application": {
+                "id": "46d14059-c3ca-47b9-a3cf-5a87c44921cb",
+                "name": "scopetest"
+            },
+            "api": {
+                "id": "4c03ce62-76ca-4643-89df-443d64c4db60",
+                "name": "scopetest"
+            },
+            "request": {
+                "ip": "165.1.213.211",
+                "uri": "/scopetest/quote?symbol=appl",
+                "method": "GET"
+            },
+            "responseCode": "200",
+            "integrationFlowInvoked": true,
+            "changed": false,
+            "creationDateTime": 1782405555318,
+            "modifiedDateTime": 1782405555427
+        }
+    ],
+    "searchCount": 9223372036854775807,
+    "transactionsCount": 9223372036854775807,
+    "count": 30,
+    "txnRangeQueryInputList": [
+        {
+            "startTid": "6a3d5aca4304e8b721c860a0",
+            "endTid": "6a3d59b44304e8b721c8606e",
+            "startCreationDateTime": "2026-06-25T16:43:53.269+00:00",
+            "endCreationDateTime": "2026-06-25T16:39:15.318+00:00",
+            "startCreationDateTimeLong": 1782405833269,
+            "endCreationDateTimeLong": 1782405555318
+        }
+    ]
+}

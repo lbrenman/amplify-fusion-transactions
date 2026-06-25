@@ -1,0 +1,4876 @@
+---
+openapi: 3.1.0
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Action:
+      type: object
+      properties:
+        actionInfo:
+          $ref: "#/components/schemas/ActionInfo"
+        actionConfig:
+          $ref: "#/components/schemas/ActionConfig"
+        actionInput:
+          type: string
+        actionOutput:
+          type: string
+        dataMapperConfigJson:
+          type: string
+        actionInputMap:
+          type: object
+          additionalProperties: {}
+        metadataExtractor:
+          type: string
+    Action1:
+      type: object
+      properties:
+        id:
+          $ref: "#/components/schemas/UUID"
+        name:
+          type: string
+        type:
+          type: string
+        actionType:
+          $ref: "#/components/schemas/Type"
+        structure:
+          type: string
+        requestConfig:
+          type: string
+        responseConfig:
+          type: string
+        actionConfigType:
+          type: string
+        displayName:
+          type: string
+        resourceUrl:
+          type: string
+        restMethod:
+          type: string
+        version:
+          type: string
+        baseUrl:
+          type: string
+    ActionConfig:
+      type: object
+      properties:
+        documentType:
+          $ref: "#/components/schemas/DocumentType"
+        javaService:
+          $ref: "#/components/schemas/JavaService"
+        config:
+          type: string
+        routePartnerData:
+          type: string
+        profileData:
+          type: string
+        routeConfig:
+          type: string
+        ordering:
+          type: boolean
+        runtimeCacheComponentKey:
+          type: string
+        hostDetails:
+          type: string
+    ActionInfo:
+      type: object
+      properties:
+        actionName:
+          type: string
+        displayName:
+          type: string
+        actionId:
+          $ref: "#/components/schemas/UUID"
+        type:
+          type: string
+        actionInputType:
+          type: string
+        resourceUrl:
+          type: string
+        restMethod:
+          type: string
+        baseUrl:
+          type: string
+        version:
+          type: string
+        isPlug:
+          type: boolean
+        plug:
+          type: boolean
+    AdvancedProperties:
+      type: object
+      properties:
+        overrideTransactionProperties:
+          type: boolean
+        enableTransactionAudits:
+          type: boolean
+        enableTransactionLogs:
+          type: boolean
+        enableTransactionPayloads:
+          type: boolean
+        enableTransactionPayloadsOnFailure:
+          type: boolean
+    Api:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+    Application:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+    AuditMongo:
+      type: object
+      properties:
+        startTime:
+          type: integer
+          format: int64
+        endTime:
+          type: integer
+          format: int64
+        transactionId:
+          type: string
+        stepName:
+          type: string
+        componentName:
+          type: string
+        displayName:
+          type: string
+        actionName:
+          type: string
+        status:
+          type: string
+        iterationNumber:
+          type: integer
+          format: int64
+        modeId:
+          type: string
+        stepId:
+          type: string
+        configId:
+          type: string
+        parentConfigId:
+          type: string
+        hasChildren:
+          type: boolean
+        serviceName:
+          type: string
+        containerId:
+          type: string
+        iteration:
+          type: integer
+          format: int64
+        path:
+          type: string
+        logExist:
+          type: boolean
+        timeInNanoSeconds:
+          type: integer
+          format: int64
+        startPayloadId:
+          type: string
+        endpayloadId:
+          type: string
+        _id:
+          $ref: "#/components/schemas/ObjectId"
+        creationDate:
+          $ref: "#/components/schemas/Date"
+        hasIterations:
+          type: boolean
+        noOfIterations:
+          type: integer
+          format: int32
+        currentStepId:
+          type: string
+        parentStepId:
+          type: string
+        isIteration:
+          type: boolean
+        processTime:
+          type: string
+    AuditResponseMongo:
+      type: object
+      properties:
+        audits:
+          type: array
+          items:
+            $ref: "#/components/schemas/AuditMongo"
+        count:
+          type: integer
+          format: int64
+    Avatar:
+      type: object
+      properties:
+        avatarId:
+          $ref: "#/components/schemas/UUID"
+        url:
+          type: string
+        file:
+          type: string
+    AverageResponseTime:
+      type: object
+      properties:
+        month:
+          type: string
+        executionsPerMonth:
+          type: integer
+          format: int64
+        statusExecutionsPerMonth:
+          type: object
+          additionalProperties:
+            type: integer
+            format: int64
+        responseTimePerMonth:
+          type: number
+          format: double
+        responseTime:
+          $ref: "#/components/schemas/Timestamp"
+    B2BMessage:
+      type: object
+      properties:
+        messageType:
+          type: string
+        version:
+          type: string
+        docType:
+          type: string
+        documentTypeId:
+          $ref: "#/components/schemas/UUID"
+        name:
+          type: string
+        description:
+          type: string
+        rootTag:
+          type: string
+        active:
+          type: boolean
+        createOn:
+          $ref: "#/components/schemas/Date"
+        modifiedOn:
+          $ref: "#/components/schemas/Date"
+        modifiedBy:
+          $ref: "#/components/schemas/User"
+        createBy:
+          $ref: "#/components/schemas/User"
+        businessDocumentType:
+          $ref: "#/components/schemas/BusinessDocumentType"
+        documentFormat:
+          $ref: "#/components/schemas/DocumentFormat"
+        structure:
+          type: string
+        keyFields:
+          type: string
+        fileType:
+          type: string
+        schema:
+          type: string
+        type:
+          type: string
+        sourceSchema:
+          type: string
+        flatFileConfig:
+          type: string
+        sourceType:
+          type: string
+        hasRefSchemas:
+          type: boolean
+        referenceSchemaList:
+          type: array
+          items:
+            $ref: "#/components/schemas/DocumentRefSchemas"
+    B2BMessageTransformConfig:
+      type: object
+      properties:
+        inMsg:
+          $ref: "#/components/schemas/B2BMessage"
+        outMsg:
+          $ref: "#/components/schemas/B2BMessage"
+        config:
+          type: string
+        keysWithOrder:
+          type: string
+        documentSchema:
+          type: string
+        execEnable:
+          type: boolean
+        sourceTreeStructure:
+          type: string
+        targetTreeStructure:
+          type: string
+    Basic:
+      type: object
+      properties:
+        logs:
+          $ref: "#/components/schemas/Logs"
+        audit:
+          $ref: "#/components/schemas/ManageAudit"
+    BusinessDocumentType:
+      type: object
+      properties:
+        businessDocumentTypeId:
+          $ref: "#/components/schemas/UUID"
+        name:
+          type: string
+        industry:
+          type: string
+        active:
+          type: boolean
+    ClusterType:
+      type: string
+      enum:
+      - MANAGED_SHARED
+      - HOSTED_DEDICATED
+      - MANAGED_DEDICATED
+      - PRIVATE_CLOUD
+      - ON_PREMISE
+      - ALL
+    Clusters:
+      type: object
+      properties:
+        clusterId:
+          $ref: "#/components/schemas/UUID"
+        clusterRefId:
+          type: string
+        clusterType:
+          type: string
+        clusterName:
+          type: string
+        runtimes:
+          type: array
+          items:
+            type: string
+    ComponentConfig:
+      type: object
+      properties:
+        componentInfo:
+          $ref: "#/components/schemas/ComponentInfo"
+        displayName:
+          type: string
+        action:
+          $ref: "#/components/schemas/Action"
+        endpoint:
+          $ref: "#/components/schemas/Endpoint"
+        order:
+          type: number
+          format: double
+        componentConfigId:
+          $ref: "#/components/schemas/UUID"
+        parentConfigId:
+          $ref: "#/components/schemas/UUID"
+        hasChildren:
+          type: boolean
+        stepName:
+          type: string
+        stepType:
+          type: string
+        childComponents:
+          type: array
+          items:
+            $ref: "#/components/schemas/ComponentConfig"
+        childServiceId:
+          $ref: "#/components/schemas/UUID"
+        invokeServiceInfo:
+          $ref: "#/components/schemas/ServiceInfo"
+        isAudit:
+          type: boolean
+        hasIterations:
+          type: boolean
+        noOfIterations:
+          type: integer
+          format: int32
+        currentStepId:
+          $ref: "#/components/schemas/UUID"
+        parentStepId:
+          $ref: "#/components/schemas/UUID"
+        baseURL:
+          type: string
+        systemTrigger:
+          type: boolean
+        iMapName:
+          type: string
+        iMapId:
+          $ref: "#/components/schemas/UUID"
+        IMapName:
+          type: string
+        IMapId:
+          $ref: "#/components/schemas/UUID"
+    ComponentInfo:
+      type: object
+      properties:
+        componentId:
+          $ref: "#/components/schemas/UUID"
+        componentName:
+          type: string
+        displayName:
+          type: string
+        syntex:
+          type: string
+        componentType:
+          type: string
+        routeName:
+          type: string
+        routeId:
+          type: string
+        appType:
+          type: string
+        isApplication:
+          type: boolean
+        categoryName:
+          type: string
+        avatar:
+          $ref: "#/components/schemas/Avatar"
+        application:
+          type: boolean
+    ConnectionDetails:
+      type: object
+      properties:
+        componentConfig:
+          $ref: "#/components/schemas/ComponentConfig"
+        orgSchema:
+          type: string
+        modeId:
+          type: string
+        endpointId:
+          type: string
+        plugId:
+          type: string
+        isApplication:
+          type: boolean
+        transactionId:
+          type: string
+        testType:
+          $ref: "#/components/schemas/TestType"
+        payload:
+          type: string
+        javaserviceId:
+          type: string
+        authRequest:
+          type: string
+        oAuthTokenResponse:
+          type: string
+        plugInternalMethod:
+          type: string
+        variables:
+          type: object
+          additionalProperties:
+            type: string
+        mapInput:
+          $ref: "#/components/schemas/MapInput"
+        OAuthTokenResponse:
+          type: string
+    CustomS3:
+      type: object
+      properties:
+        accessKey:
+          type: string
+        secretKey:
+          type: string
+        region:
+          type: string
+        bucketName:
+          type: string
+    Date:
+      type: string
+      format: date
+      examples:
+      - 2022-03-10
+    Document:
+      type: object
+      properties:
+        documentAsMap:
+          type: object
+          additionalProperties: {}
+        empty:
+          type: boolean
+    DocumentFormat:
+      type: object
+      properties:
+        documentFormatId:
+          $ref: "#/components/schemas/UUID"
+        name:
+          type: string
+        technical_format:
+          type: string
+        active:
+          type: boolean
+    DocumentRefSchemas:
+      type: object
+      properties:
+        fileName:
+          type: string
+        schemaLocation:
+          type: string
+        xsdSchema:
+          type: string
+    DocumentType:
+      type: object
+      properties:
+        documentTypeId:
+          $ref: "#/components/schemas/UUID"
+        name:
+          type: string
+        description:
+          type: string
+        version:
+          type: string
+        rootTag:
+          type: string
+        active:
+          type: boolean
+        docType:
+          type: string
+        sourceSchema:
+          type: string
+        jsonSchema:
+          type: string
+        sourceType:
+          type: string
+        flatFileConfig:
+          type: string
+        createOn:
+          $ref: "#/components/schemas/Date"
+        modifiedOn:
+          $ref: "#/components/schemas/Date"
+        referenceSchemaList:
+          type: array
+          items:
+            $ref: "#/components/schemas/DocumentRefSchemas"
+        isHasReferenceSchemaList:
+          type: boolean
+        keysWithOrder:
+          type: string
+        hasReferenceSchemaList:
+          type: boolean
+    Endpoint:
+      type: object
+      properties:
+        endpointInfo:
+          $ref: "#/components/schemas/EndpointInfo"
+        overrideEndpoint:
+          type: boolean
+        newEndpointConfig:
+          type: string
+        endpointConfig:
+          type: string
+        authTokenConfig:
+          type: string
+        plug:
+          $ref: "#/components/schemas/Plug"
+        refreshed:
+          type: boolean
+        restConnectionConfig:
+          type: string
+        endpointConfigModel:
+          type: object
+          additionalProperties: {}
+        queueConfig:
+          type: string
+        restConnectionConfigMap:
+          type: object
+          additionalProperties: {}
+        authTokenConfigModel:
+          type: object
+          additionalProperties: {}
+        genericConfig:
+          type: string
+    EndpointInfo:
+      type: object
+      properties:
+        endpointId:
+          $ref: "#/components/schemas/UUID"
+        endpointTypeId:
+          $ref: "#/components/schemas/UUID"
+        endpointTypeName:
+          type: string
+        isBeanType:
+          type: boolean
+        beanName:
+          type: string
+        isEnabled:
+          type: boolean
+        isOAuth:
+          type: boolean
+        isSubdomain:
+          type: boolean
+        isGateway:
+          type: boolean
+        endpointName:
+          type: string
+        projectName:
+          type: string
+        modeName:
+          type: string
+        orgSchema:
+          type: string
+        beanType:
+          type: boolean
+        enabled:
+          type: boolean
+        OAuth:
+          type: boolean
+        subdomain:
+          type: boolean
+        gateway:
+          type: boolean
+    EnvironmentProperties:
+      type: object
+      properties:
+        basic:
+          $ref: "#/components/schemas/Basic"
+        mail:
+          $ref: "#/components/schemas/MailProperties"
+        properties:
+          type: object
+          additionalProperties:
+            type: string
+        ir_type:
+          type: string
+        maxConcurrencyLimit:
+          type: integer
+          format: int32
+        installation_type:
+          type: string
+        orgSchema:
+          type: string
+        modeId:
+          type: string
+        dns:
+          type: string
+        customDatastore:
+          type: boolean
+        customS3:
+          $ref: "#/components/schemas/CustomS3"
+        override:
+          type: boolean
+        advancedProperties:
+          $ref: "#/components/schemas/AdvancedProperties"
+    EventDetails:
+      type: object
+      properties:
+        active:
+          type: boolean
+        url:
+          type: string
+        type:
+          type: string
+        eventConfig:
+          type: string
+    ExecutionLimit:
+      type: object
+      properties:
+        hoursLimit:
+          type: integer
+          format: int32
+        executionsLimit:
+          type: integer
+          format: int32
+    GetTransactionCountsRequest:
+      type: object
+      properties:
+        projectArtifacts:
+          type: array
+          items:
+            $ref: "#/components/schemas/ProjectIntegrationsRequest"
+        transactionIds:
+          type: array
+          items:
+            type: string
+        statuses:
+          type: array
+          items:
+            type: string
+        clusters:
+          type: array
+          items:
+            type: string
+        startDate:
+          type: string
+        endDate:
+          type: string
+    HandlerRequest:
+      type: object
+      properties:
+        key:
+          type: string
+        hasDelete:
+          type: boolean
+        type:
+          type: string
+        service:
+          $ref: "#/components/schemas/Service"
+        orgSchema:
+          type: string
+        modeId:
+          type: string
+        transactionList:
+          type: array
+          items:
+            type: string
+        transactionErrorList:
+          type: array
+          items:
+            $ref: "#/components/schemas/TransactionError"
+        licenseId:
+          type: string
+        transactionError:
+          $ref: "#/components/schemas/TransactionError"
+        apiPath:
+          type: string
+        page:
+          type: integer
+          format: int32
+        size:
+          type: integer
+          format: int32
+        handlerRequestList:
+          type: array
+          items:
+            $ref: "#/components/schemas/HandlerRequest"
+    IRSystemInfo:
+      type: object
+      properties:
+        totalMemoryInMbs:
+          type: integer
+          format: int64
+        physicalProcessorCount:
+          type: integer
+          format: int32
+        physicalPackageCount:
+          type: integer
+          format: int32
+        logicalProcessorCount:
+          type: integer
+          format: int32
+        maxFreq:
+          type: integer
+          format: int64
+        cpuInfo:
+          type: string
+        maxHeapMemoryInMbs:
+          type: integer
+          format: int64
+        maxExecutionLimit:
+          type: integer
+          format: int32
+    IrRequest:
+      type: object
+      properties:
+        serviceId:
+          $ref: "#/components/schemas/UUID"
+        orgSchema:
+          type: string
+        modeId:
+          $ref: "#/components/schemas/UUID"
+        licenseId:
+          $ref: "#/components/schemas/UUID"
+        serviceData:
+          type: string
+        service:
+          $ref: "#/components/schemas/Service"
+        transactionId:
+          $ref: "#/components/schemas/UUID"
+        payload:
+          type: string
+        payloadId:
+          type: string
+        payloadPath:
+          type: string
+        isServiceTx:
+          type: boolean
+        projectName:
+          type: string
+        serviceName:
+          type: string
+        integrationName:
+          type: string
+        version:
+          type: string
+        parentTransactionId:
+          type: string
+        startTime:
+          type: string
+        timeInNanoSeconds:
+          type: integer
+          format: int64
+        order:
+          type: number
+          format: double
+        irId:
+          type: string
+        lines:
+          type: integer
+          format: int32
+        apiPath:
+          type: string
+        irSystemInfo:
+          $ref: "#/components/schemas/IRSystemInfo"
+        userName:
+          type: string
+        backPressure:
+          type: integer
+          format: int32
+        podName:
+          type: string
+        gatewayId:
+          type: string
+        componentConfigId:
+          $ref: "#/components/schemas/UUID"
+        clusterName:
+          type: string
+        clusterRefId:
+          type: string
+        clusterType:
+          $ref: "#/components/schemas/ClusterType"
+        forceDisableEventRequired:
+          type: boolean
+        firstName:
+          type: string
+        lastName:
+          type: string
+        componentName:
+          type: string
+        reProcessMetadata:
+          type: object
+          additionalProperties:
+            type: string
+        serviceTx:
+          type: boolean
+    JavaService:
+      type: object
+      properties:
+        name:
+          type: string
+        isCompiled:
+          type: boolean
+        className:
+          type: string
+        classFile:
+          type: string
+          format: binary
+        id:
+          type: string
+    JsonValue:
+      type: object
+      properties:
+        valueType:
+          $ref: "#/components/schemas/ValueType"
+    Logs:
+      type: object
+      properties:
+        configuredLevel:
+          type: string
+    MailProperties:
+      type: object
+      properties:
+        sendErrorMail:
+          type: boolean
+        host:
+          type: string
+        port:
+          type: integer
+          format: int32
+        fromMailId:
+          type: string
+        fromPassword:
+          type: string
+        toMailId:
+          type: string
+        useTLS:
+          type: boolean
+        notifyEventStatus:
+          type: boolean
+        compressAlertsForCWErrors:
+          type: boolean
+        userName:
+          type: string
+    ManageAudit:
+      type: object
+      properties:
+        revision:
+          type: boolean
+        history:
+          type: boolean
+    MapInput:
+      type: object
+      properties:
+        mappingConfigId:
+          $ref: "#/components/schemas/UUID"
+        inputJson:
+          type: string
+        orgSchema:
+          type: string
+        modeId:
+          type: string
+        multistep:
+          type: boolean
+        licenseId:
+          $ref: "#/components/schemas/UUID"
+        keysWithOrder:
+          type: string
+        config:
+          type: string
+        dataMapperData:
+          type: object
+          additionalProperties:
+            type: object
+        b2BMessageTransformConfig:
+          $ref: "#/components/schemas/B2BMessageTransformConfig"
+        rawInput:
+          type: string
+        edifactInTransformConfig:
+          type: string
+        x12InTransformConfig:
+          type: string
+        edifactOutTransformConfig:
+          type: string
+        x12OutTransformConfig:
+          type: string
+        inbound:
+          type: boolean
+        outbound:
+          type: boolean
+        srcDataObjectRoot:
+          type: string
+        trgDataObjectRoot:
+          type: string
+        previousInput:
+          type: boolean
+        clusterRefId:
+          type: string
+        clusterType:
+          $ref: "#/components/schemas/ClusterType"
+    McpCallInfo:
+      type: object
+      properties:
+        method:
+          type: string
+        name:
+          type: string
+    MonitorRequest:
+      type: object
+      properties:
+        projectIds:
+          type: array
+          items:
+            type: string
+        applicationIds:
+          type: array
+          items:
+            type: string
+        apiIds:
+          type: array
+          items:
+            type: string
+        serviceIds:
+          type: array
+          items:
+            type: string
+        transactionIds:
+          type: array
+          items:
+            type: string
+        projectNames:
+          type: array
+          items:
+            type: string
+        serviceNames:
+          type: array
+          items:
+            type: string
+        statuses:
+          type: array
+          items:
+            type: string
+        clusters:
+          type: array
+          items:
+            $ref: "#/components/schemas/Clusters"
+        httpMethods:
+          type: array
+          items:
+            type: string
+        responseCodes:
+          type: array
+          items:
+            type: string
+        requestUri:
+          type: string
+        sourceIp:
+          type: string
+        startDate:
+          type: string
+        endDate:
+          type: string
+        exceptions:
+          type: boolean
+        reprocessed:
+          type: boolean
+        isService:
+          type: boolean
+        transactionType:
+          $ref: "#/components/schemas/TransactionType"
+        reportName:
+          type: string
+        tenant:
+          type: string
+        mode:
+          type: string
+        uuid:
+          $ref: "#/components/schemas/UUID"
+        generateBatches:
+          type: boolean
+        startDateRangeQuery:
+          type: string
+        tidRangeQuery:
+          type: string
+        forwardDirection:
+          type: boolean
+        mcpTools:
+          type: array
+          items:
+            type: string
+        mcpDiscoveryHidden:
+          type: boolean
+        quotaConstraintTypes:
+          type: array
+          items:
+            type: string
+        service:
+          type: boolean
+    MonitorTransaction:
+      type: object
+      properties:
+        _id:
+          $ref: "#/components/schemas/ObjectId"
+        tid:
+          type: string
+        transactionId:
+          type: string
+        serviceName:
+          type: string
+        status:
+          type: string
+        startStatus:
+          type: string
+        endStatus:
+          type: string
+        runtimeId:
+          type: string
+        resubmitCount:
+          type: string
+        serviceId:
+          type: string
+        projectName:
+          type: string
+        projectId:
+          type: string
+        parentTransactionId:
+          type: string
+        runtime:
+          type: string
+        cDate:
+          $ref: "#/components/schemas/Date"
+        mDate:
+          $ref: "#/components/schemas/Date"
+        creationDateTime:
+          type: integer
+          format: int64
+        modifiedDateTime:
+          type: integer
+          format: int64
+        statusMap:
+          type: object
+          additionalProperties:
+            type: integer
+            format: int32
+        responsetime:
+          type: string
+        executions:
+          type: integer
+          format: int32
+        hasWarning:
+          type: boolean
+        isEvent:
+          type: boolean
+        mcp:
+          $ref: "#/components/schemas/McpCallInfo"
+        clusterName:
+          type: string
+        clusterId:
+          type: string
+        clusterRefId:
+          type: string
+        clusterType:
+          type: string
+        isChanged:
+          type: boolean
+        baseTag:
+          type: string
+        application:
+          $ref: "#/components/schemas/Application"
+        api:
+          $ref: "#/components/schemas/Api"
+        request:
+          $ref: "#/components/schemas/Request"
+        responseCode:
+          type: string
+        integrationFlowInvoked:
+          type: boolean
+        CDate:
+          $ref: "#/components/schemas/Date"
+        MDate:
+          $ref: "#/components/schemas/Date"
+        changed:
+          type: boolean
+    MonitorTransactionData:
+      type: object
+      properties:
+        transactions:
+          type: array
+          items:
+            $ref: "#/components/schemas/MonitorTransaction"
+        searchCount:
+          type: integer
+          format: int64
+        transactionsCount:
+          type: integer
+          format: int64
+        count:
+          type: integer
+          format: int64
+    ObjectId:
+      type: object
+      properties:
+        timestamp:
+          type: integer
+          format: int32
+        nonce:
+          type: integer
+          format: int64
+        date:
+          $ref: "#/components/schemas/Date"
+    Plug:
+      type: object
+      properties:
+        id:
+          $ref: "#/components/schemas/UUID"
+        name:
+          type: string
+        structureJson:
+          type: string
+        configJson:
+          type: string
+        query:
+          type: string
+        connectionConfig:
+          type: string
+    PlugStructure:
+      type: object
+      properties:
+        endpointId:
+          $ref: "#/components/schemas/UUID"
+        name:
+          type: string
+        description:
+          type: string
+        projectId:
+          $ref: "#/components/schemas/UUID"
+        action:
+          $ref: "#/components/schemas/Action1"
+        structureJson:
+          type: string
+        configJson:
+          type: string
+        displayQuery:
+          type: string
+        inputStructure:
+          type: string
+        outputStructure:
+          type: string
+        createdOn:
+          $ref: "#/components/schemas/Date"
+        modifiedOn:
+          $ref: "#/components/schemas/Date"
+        comments:
+          type: string
+        projectName:
+          type: string
+        tag:
+          type: string
+        projectTag:
+          type: string
+        mappingStructure:
+          type: string
+        dbQuery:
+          type: string
+    ProjectIntegrationsRequest:
+      type: object
+      properties:
+        projectName:
+          type: string
+        integrationNames:
+          type: array
+          items:
+            type: string
+    ReferenceDataInputRequest:
+      type: object
+      properties:
+        tableId:
+          $ref: "#/components/schemas/UUID"
+        modeId:
+          $ref: "#/components/schemas/UUID"
+        orgSchema:
+          type: string
+        page:
+          type: integer
+          format: int32
+        size:
+          type: integer
+          format: int32
+        apiPath:
+          type: string
+        clusterRefId:
+          type: string
+        clusterType:
+          $ref: "#/components/schemas/ClusterType"
+    RefreshTenantCacheRequest:
+      type: object
+      properties:
+        allTenants:
+          type: boolean
+        tenantNames:
+          type: array
+          items:
+            type: string
+    Request:
+      type: object
+      properties:
+        ip:
+          type: string
+        uri:
+          type: string
+        method:
+          type: string
+    Service:
+      type: object
+      properties:
+        serviceInfo:
+          $ref: "#/components/schemas/ServiceInfo"
+        componentConfigs:
+          type: array
+          items:
+            $ref: "#/components/schemas/ComponentConfig"
+        projectId:
+          $ref: "#/components/schemas/UUID"
+        projectName:
+          type: string
+        modeId:
+          $ref: "#/components/schemas/UUID"
+        orgSchema:
+          type: string
+        licenceId:
+          $ref: "#/components/schemas/UUID"
+        eventStatus:
+          type: boolean
+        isInvokeService:
+          type: boolean
+        eventDetails:
+          $ref: "#/components/schemas/EventDetails"
+        isEvent:
+          type: boolean
+        jarsPath:
+          type: array
+          items:
+            type: string
+        dataMapperData:
+          type: object
+          additionalProperties:
+            type: object
+        eventType:
+          type: string
+        dns:
+          type: string
+        advancedProperties:
+          $ref: "#/components/schemas/AdvancedProperties"
+        invokeService:
+          type: boolean
+        event:
+          type: boolean
+    ServiceInfo:
+      type: object
+      properties:
+        serviceId:
+          $ref: "#/components/schemas/UUID"
+        serviceName:
+          type: string
+        isChanged:
+          type: boolean
+        baseTag:
+          type: string
+    TestInput:
+      type: object
+      properties:
+        artifactId:
+          $ref: "#/components/schemas/UUID"
+        artifactName:
+          type: string
+        inputStructure:
+          type: string
+        type:
+          type: string
+        schema:
+          type: string
+        modeId:
+          $ref: "#/components/schemas/UUID"
+        licenseId:
+          $ref: "#/components/schemas/UUID"
+        inputJson:
+          type: string
+        clusterRefId:
+          type: string
+        clusterType:
+          $ref: "#/components/schemas/ClusterType"
+    TestType:
+      type: string
+      enum:
+      - ENDPOINT_TEST
+      - PLUG_TEST
+      - GENERATE_ACCESS_TOKEN
+      - JAVASERVICE_TEST
+      - IMAP_TEST
+      - VAULT_CONNECTION_TEST
+      - HSM_CONNECTION_TEST
+      - NONE
+    Timestamp:
+      type: object
+      properties:
+        nanos:
+          type: integer
+          format: int32
+        time:
+          type: integer
+          format: int64
+    TrackingField:
+      type: object
+      properties:
+        name:
+          type: string
+        path:
+          type: string
+        type:
+          type: string
+        componentConfigId:
+          $ref: "#/components/schemas/UUID"
+    TransactionError:
+      type: object
+      properties:
+        transactionId:
+          type: string
+        tenant:
+          type: string
+        modeId:
+          type: string
+        isEvent:
+          type: boolean
+        projectId:
+          type: string
+        serviceId:
+          type: string
+        projectName:
+          type: string
+        serviceName:
+          type: string
+        category:
+          type: string
+        connectionName:
+          type: string
+        creationTime:
+          type: string
+        zonedCreationTime:
+          $ref: "#/components/schemas/ZonedDateTime"
+        eventType:
+          type: string
+        licenseId:
+          type: string
+        timeInNanoSeconds:
+          type: integer
+          format: int64
+        payload:
+          type: string
+        order:
+          type: number
+          format: double
+        creationTimeStamp:
+          type: integer
+          format: int64
+        event:
+          type: boolean
+    TransactionType:
+      type: string
+      enum:
+      - ALL
+      - API
+      - MCP
+    Type:
+      type: object
+      properties:
+        id:
+          $ref: "#/components/schemas/UUID"
+        name:
+          type: string
+        type:
+          type: string
+    UUID:
+      type: string
+      format: uuid
+      pattern: "[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"
+    User:
+      type: object
+      properties:
+        userData:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/JsonValue"
+        token:
+          type: string
+        modeName:
+          type: string
+        modeId:
+          type: string
+        userSchema:
+          type: string
+        userId:
+          type: string
+        licenseId:
+          type: string
+    ValueType:
+      type: string
+      enum:
+      - ARRAY
+      - OBJECT
+      - STRING
+      - NUMBER
+      - "TRUE"
+      - "FALSE"
+      - "NULL"
+    WsClusterRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+        type:
+          type: string
+        dataPlaneType:
+          type: string
+    ZonedDateTime:
+      type: string
+      format: date-time
+      examples:
+      - 2022-03-10T12:15:50-04:00
+paths:
+  /api/monitor/access/latest:
+    get:
+      tags:
+      - Integration/Access
+      parameters:
+      - name: applicationType
+        in: query
+        schema:
+          type: string
+          default: ""
+      - name: endDate
+        in: query
+        schema:
+          type: string
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "1"
+      - name: searchParam
+        in: query
+        schema:
+          type: string
+          default: ""
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "10"
+      - name: startDate
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Latest
+  /api/monitor/access/recent:
+    get:
+      tags:
+      - Integration/Access
+      parameters:
+      - name: endDate
+        in: query
+        schema:
+          type: string
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "1"
+      - name: searchParam
+        in: query
+        schema:
+          type: string
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "10"
+      - name: startDate
+        in: query
+        schema:
+          type: string
+      - name: type
+        in: query
+        schema:
+          type: string
+      - name: userId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Recent
+    delete:
+      tags:
+      - Integration/Access
+      parameters:
+      - name: type
+        in: query
+        schema:
+          type: string
+      - name: userId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Delete Recent History
+  /api/monitor/cluster/config/information:
+    get:
+      parameters:
+      - name: protocol
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Config Information
+      tags:
+      - Cluster Config Resource
+  /api/monitor/cluster/config/serverproperties:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Server Properties
+      tags:
+      - Cluster Config Resource
+  /api/monitor/cluster/downloadPublicCertificate:
+    get:
+      parameters:
+      - name: type
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Download Server Public Certificate
+      tags:
+      - Cluster Config Resource
+  /api/monitor/cluster/javaservicesinfo:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Java Services Info
+      tags:
+      - Cluster Config Resource
+  /api/monitor/cluster/security/activation:
+    put:
+      parameters:
+      - name: activate
+        in: query
+        schema:
+          type: boolean
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: tenant
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Cluster Activation
+      tags:
+      - Cluster Security Resource
+  /api/monitor/cluster/security/activeClusters:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Active Clusters
+      tags:
+      - Cluster Security Resource
+  /api/monitor/cluster/security/availableClusters:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Available Clusters V 1
+      tags:
+      - Cluster Security Resource
+  /api/monitor/cluster/security/availableClustersAllModes:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Available Clusters All Modes
+      tags:
+      - Cluster Security Resource
+  /api/monitor/cluster/security/connectedServicesCount:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Connected Services Count
+      tags:
+      - Cluster Security Resource
+  /api/monitor/cluster/security/copyClusterKey:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Copy Cluster Key
+      tags:
+      - Cluster Security Resource
+  /api/monitor/cluster/security/deleteCluster:
+    delete:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Delete Cluster
+      tags:
+      - Cluster Security Resource
+  /api/monitor/cluster/security/environmentProperties:
+    get:
+      parameters:
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: tenant
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Environment Properties
+      tags:
+      - Cluster Security Resource
+  /api/monitor/cluster/security/generateCluster:
+    post:
+      parameters:
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: tenant
+        in: query
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WsClusterRequest"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Generate Cluster
+      tags:
+      - Cluster Security Resource
+  /api/monitor/cluster/security/getClustersMetadata:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Clusters Metadata
+      tags:
+      - Cluster Security Resource
+  /api/monitor/cluster/security/runtimeServices:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Runtime Services
+      tags:
+      - Cluster Security Resource
+  /api/monitor/cluster/servercertificatesInfo:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Server Certificates Info
+      tags:
+      - Cluster Config Resource
+  /api/monitor/consumerApplication/runCredentialProvisioningFlow:
+    post:
+      parameters:
+      - name: applicationId
+        in: query
+        schema:
+          type: string
+      - name: idpId
+        in: query
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: {}
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Run Credential Provisioning Flow
+      tags:
+      - Consumer Application Resource
+  /api/monitor/dashboard/data/download/transactions:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MonitorRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/octet-stream: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Download Transactions
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/data/download/transactions/offline:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MonitorRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Download Transactions Offline
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/data/getTransactionsCount:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GetTransactionCountsRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Transactions Count
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/data/get_aggregated_application_usage:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MonitorRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Aggregated Application Usage
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/data/get_application_usage_batch:
+    post:
+      parameters:
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 20
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MonitorRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Application Usage Batch
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/data/get_integrations:
+    post:
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 1
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 20
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MonitorRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Integrations
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/data/get_recent_transactions:
+    post:
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 1
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 20
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MonitorRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Recent Transactions
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/data/get_service_transactions:
+    post:
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 1
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 20
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MonitorRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Service Transactions
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/data/get_transaction_by_id/{transactionId}:
+    get:
+      parameters:
+      - name: transactionId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Transaction By Id
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/data/get_transactions:
+    post:
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 1
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 20
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MonitorRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Transactions
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/data/get_transactions_batch:
+    post:
+      parameters:
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 20
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MonitorRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Transactions Batches
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/data/{application}/metadata:
+    post:
+      parameters:
+      - name: application
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: connectionId
+        in: query
+        schema:
+          type: string
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 1
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 20
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get App Specific Data
+      tags:
+      - Monitor Dashboard Resource
+    delete:
+      parameters:
+      - name: application
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: data
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get App Specific Data
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/metrics/get_executions_count_per_status:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MonitorRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Executions Count Per Status
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/metrics/get_executions_status_count_per_event:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MonitorRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Executions Status Count Per Event
+      tags:
+      - Monitor Dashboard Resource
+  /api/monitor/dashboard/v2/averageresponsetime:
+    get:
+      parameters:
+      - name: endDate
+        in: query
+        schema:
+          type: string
+      - name: startDate
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/AverageResponseTime"
+      security:
+      - bearerAuth: []
+      summary: Get Average Response Time _v 2
+      tags:
+      - Dashboard Resource
+  /api/monitor/dashboard/v2/imaphistory:
+    get:
+      tags:
+      - Integration/Tracking
+      parameters:
+      - name: endDate
+        in: query
+        schema:
+          type: string
+      - name: keys
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "1"
+      - name: searchParam
+        in: query
+        schema:
+          type: string
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "30"
+      - name: startDate
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Imap Histroy
+  /api/monitor/health:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      summary: Get Health Monitor Response
+      tags:
+      - Health Monitor Resource
+  /api/monitor/ir/componentTest/{serviceId}/{componentConfigId}:
+    post:
+      parameters:
+      - name: componentConfigId
+        in: path
+        required: true
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: serviceId
+        in: path
+        required: true
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: type
+        in: query
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "201":
+          description: Created
+      security:
+      - bearerAuth: []
+      summary: Execute Component Test
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/delete_token/{endpointId}/{orgSchema}/{modeId}:
+    delete:
+      parameters:
+      - name: endpointId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modeId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: orgSchema
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Remove Token From The Cache
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/event:
+    delete:
+      parameters:
+      - name: forceDisableEventRequired
+        in: query
+        schema:
+          type: boolean
+      - name: serviceId
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Stop Event
+      tags:
+      - Inbound Resource
+    post:
+      parameters:
+      - name: serviceId
+        in: query
+        schema:
+          type: string
+      responses:
+        "201":
+          description: Created
+      security:
+      - bearerAuth: []
+      summary: Start Event
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/generateAccessToken:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "201":
+          description: Created
+      security:
+      - bearerAuth: []
+      summary: Generate Access Token For Connection
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/generateAccessTokenForXchange:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Generate Access Token For Xchange
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/getCachedData:
+    get:
+      parameters:
+      - name: cachedKey
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Cached Data
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/getComponentConfigs:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/IrRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Component Configs
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/getImapData:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MapInput"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Imap Data
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/getIntegrationData:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/IrRequest"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Integration Data
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/getReferenceCacheData:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReferenceDataInputRequest"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Reference Cache Data
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/getServiceData:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/IrRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Get Service Data
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/hsm/{hsmConnectionId}/test:
+    get:
+      parameters:
+      - name: hsmConnectionId
+        in: path
+        required: true
+        schema:
+          $ref: "#/components/schemas/UUID"
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Test HSM Connection
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/iMapTest:
+    post:
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                validate:
+                  type: string
+                file:
+                  type: string
+                rawInput:
+                  type: string
+                mappingConfigId:
+                  type: string
+                edifactInTransformConfig:
+                  type: string
+                x12InTransformConfig:
+                  type: string
+                edifactOutTransformConfig:
+                  type: string
+                x12OutTransformConfig:
+                  type: string
+                isPreviousInput:
+                  type: boolean
+                srcDataObjectRoot:
+                  type: string
+                trgDataObjectRoot:
+                  type: string
+            encoding:
+              file:
+                contentType: application/octet-stream
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Imap Test
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/imdg/app_handlers:
+    get:
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get App Handlers
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/delete_from_handler:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/HandlerRequest"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Delete From Handler
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/delete_handlers:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/HandlerRequest"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Delete Handler
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/delete_transactions:
+    post:
+      parameters:
+      - name: type
+        in: query
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Delete Failed Transactions
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/failed_transactions:
+    get:
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Failed Transactions
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/inbound/queue_contents:
+    get:
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Inbound Queue Contents
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/outbound/queue_contents/{orgSchema}/{modeId}:
+    get:
+      parameters:
+      - name: modeId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: orgSchema
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Outbound Queue Contents
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/rate_limit/queue_contents:
+    get:
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Rate Limit Queue Contents
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/rate_limit/retrigger_transactions:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: string
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Re Trigger Transactions
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/reprocess_failed_transactions:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/TransactionError"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Re Process Failed Transactions
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/reprocess_from_handler:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/HandlerRequest"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Re Process From Handler
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/retrigger_failed_transactions:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/TransactionError"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Re Trigger Failed Transactions
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/imdg/retrigger_from_handler:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/HandlerRequest"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Re Trigger From Handler
+      tags:
+      - App Handler Queue Resource
+  /api/monitor/ir/integrationTest:
+    post:
+      parameters:
+      - name: projectId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: projectName
+        in: query
+        schema:
+          type: string
+      - name: serviceId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: serviceName
+        in: query
+        schema:
+          type: string
+      responses:
+        "201":
+          description: Created
+      security:
+      - bearerAuth: []
+      summary: Integration Test
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/javaservice/delete:
+    delete:
+      parameters:
+      - name: fileName
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Delete Jar
+      tags:
+      - Java Service Resource
+  /api/monitor/ir/javaservice/download:
+    get:
+      parameters:
+      - name: fileName
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Download Jar
+      tags:
+      - Java Service Resource
+  /api/monitor/ir/javaservice/getAllJars:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get All Jars
+      tags:
+      - Java Service Resource
+  /api/monitor/ir/javaservice/jarsmetadata:
+    get:
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Jars Metadata
+      tags:
+      - Java Service Resource
+  /api/monitor/ir/javaservice/upload:
+    post:
+      parameters:
+      - name: fileName
+        in: query
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+        required: true
+      responses:
+        "201":
+          description: Created
+      security:
+      - bearerAuth: []
+      summary: Upload Jar
+      tags:
+      - Java Service Resource
+  /api/monitor/ir/javaservice/validate:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: {}
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Validate
+      tags:
+      - Java Service Resource
+  /api/monitor/ir/jdbcAdaper/getDatabaseDetails:
+    get:
+      parameters:
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Database Details
+      tags:
+      - Connector Resource
+  /api/monitor/ir/jdbcAdaper/getStoredProcedureDef:
+    get:
+      parameters:
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      - name: routineName
+        in: query
+        schema:
+          type: string
+      - name: schemaName
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Stored Procedure Def Query
+      tags:
+      - Connector Resource
+  /api/monitor/ir/jdbcAdaper/getStoredProcedures:
+    get:
+      parameters:
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Stored Procedures
+      tags:
+      - Connector Resource
+  /api/monitor/ir/jdbcAdaper/getTableDetails:
+    get:
+      parameters:
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      - name: schemaName
+        in: query
+        schema:
+          type: string
+      - name: tableName
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get DB Table Columns Query
+      tags:
+      - Connector Resource
+  /api/monitor/ir/manage/gateway/live_logs/{gatewayID}:
+    get:
+      parameters:
+      - name: gatewayID
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: lines
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: mode
+        in: query
+        schema:
+          type: string
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Gateway Logs
+      tags:
+      - Manage Resource
+  /api/monitor/ir/manage/irs/{irID}:
+    get:
+      parameters:
+      - name: irID
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modeId
+        in: query
+        schema:
+          type: string
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get IR
+      tags:
+      - Manage Resource
+  /api/monitor/ir/manage/live_logs/{irID}:
+    get:
+      parameters:
+      - name: irID
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: lines
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: modeId
+        in: query
+        schema:
+          type: string
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get IR Logs
+      tags:
+      - Manage Resource
+  /api/monitor/ir/manage/metrics/{irID}:
+    get:
+      parameters:
+      - name: irID
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modeId
+        in: query
+        schema:
+          type: string
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Metrics
+      tags:
+      - Manage Resource
+  /api/monitor/ir/manage/refreshTenantsCache:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RefreshTenantCacheRequest"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      summary: Refresh Tenants Cache
+      tags:
+      - Manage Resource
+  /api/monitor/ir/manage/restartGateway/{gatewayID}:
+    get:
+      parameters:
+      - name: gatewayID
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: mode
+        in: query
+        schema:
+          type: string
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      - name: userName
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Restart Gateway
+      tags:
+      - Manage Resource
+  /api/monitor/ir/manage/restartIR/{irID}:
+    get:
+      parameters:
+      - name: irID
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: mode
+        in: query
+        schema:
+          type: string
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      - name: userName
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Restart IR
+      tags:
+      - Manage Resource
+  /api/monitor/ir/mcpProxies/{endpointId}:
+    get:
+      parameters:
+      - name: endpointId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Mcp Proxies
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/multistepTest:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TestInput"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Multistep Test
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/plugAdapter/getApplicationPlugEntities:
+    get:
+      parameters:
+      - name: action
+        in: query
+        schema:
+          type: string
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: entity
+        in: query
+        schema:
+          type: string
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Application Plug Entities
+      tags:
+      - Connector Resource
+  /api/monitor/ir/plugAdapter/getApplicationPlugMetadata:
+    get:
+      parameters:
+      - name: action
+        in: query
+        schema:
+          type: string
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: entity
+        in: query
+        schema:
+          type: string
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      - name: query
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Application Plug Metadata
+      tags:
+      - Connector Resource
+  /api/monitor/ir/plugAdapter/getPlugEventsMetadata:
+    get:
+      parameters:
+      - name: clusterRefId
+        in: query
+        schema:
+          type: string
+      - name: clusterType
+        in: query
+        schema:
+          $ref: "#/components/schemas/ClusterType"
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: eventName
+        in: query
+        schema:
+          type: string
+      - name: eventType
+        in: query
+        schema:
+          type: string
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Application Plug Event Metadata
+      tags:
+      - Connector Resource
+  /api/monitor/ir/plugAdapter/structures/generate:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PlugStructure"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Generate Plug Input Output Structures
+      tags:
+      - Connector Resource
+  /api/monitor/ir/removeCachedData:
+    delete:
+      parameters:
+      - name: cachedKey
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Remove Cached Data
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/removeReferenceCacheData:
+    delete:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReferenceDataInputRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Remove Reference Cache Data
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/retryFlow:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/IrRequest"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Retry Flow
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/salesforceAdapter/getEvents:
+    get:
+      parameters:
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: eventType
+        in: query
+        schema:
+          type: string
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Salesforce Event
+      tags:
+      - Connector Resource
+  /api/monitor/ir/salesforceAdapter/getTableMetadata:
+    get:
+      parameters:
+      - name: action
+        in: query
+        schema:
+          type: string
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      - name: tableName
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Salesforce Table Metadata
+      tags:
+      - Connector Resource
+  /api/monitor/ir/salesforceAdapter/getTables:
+    get:
+      parameters:
+      - name: action
+        in: query
+        schema:
+          type: string
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Salesforce Table
+      tags:
+      - Connector Resource
+  /api/monitor/ir/sapAdapter/getIdocSchema:
+    get:
+      parameters:
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: idocExtension
+        in: query
+        schema:
+          type: string
+      - name: idocType
+        in: query
+        schema:
+          type: string
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Idoc Schema
+      tags:
+      - Connector Resource
+  /api/monitor/ir/sapAdapter/getIdocs:
+    get:
+      parameters:
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Idocs
+      tags:
+      - Connector Resource
+  /api/monitor/ir/sapAdapter/getRFCSchema:
+    get:
+      parameters:
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      - name: rfc
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get RFC Schema
+      tags:
+      - Connector Resource
+  /api/monitor/ir/sapAdapter/getRFCs:
+    get:
+      parameters:
+      - name: endpointId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: orgSchema
+        in: query
+        schema:
+          type: string
+      - name: searchParam
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get RFC
+      tags:
+      - Connector Resource
+  /api/monitor/ir/stopTest:
+    delete:
+      parameters:
+      - name: serviceId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Stop Test
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/syncEventState:
+    post:
+      parameters:
+      - name: serviceId
+        in: query
+        schema:
+          type: string
+      responses:
+        "201":
+          description: Created
+      security:
+      - bearerAuth: []
+      summary: Sync Event State
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/synchronizeConnection/{endpointId}:
+    get:
+      parameters:
+      - name: endpointId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modeId
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Synchronize Connection
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/testConnection/{endpointId}:
+    post:
+      parameters:
+      - name: endpointId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modeId
+        in: query
+        schema:
+          type: string
+      responses:
+        "201":
+          description: Created
+      security:
+      - bearerAuth: []
+      summary: Test Connection
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/testEndpointForXchange:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: {}
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Test Endpoint For Xchange
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/testJavaService:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TestInput"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Test Java Service
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/testPlug:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TestInput"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Test Plug
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/testService:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TestInput"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Test Service
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/testendpointRequest:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConnectionDetails"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+        "400":
+          description: Bad Request
+      summary: Test Connection Request
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/update_cluster_properties:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EnvironmentProperties"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Update Cluster Properties
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/update_properties:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EnvironmentProperties"
+        required: true
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Update Properties
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/vault/connection/{vaultConnectionId}/test:
+    post:
+      parameters:
+      - name: vaultConnectionId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: modeId
+        in: query
+        schema:
+          type: string
+      responses:
+        "201":
+          description: Created
+      security:
+      - bearerAuth: []
+      summary: Test Vault Connection
+      tags:
+      - Inbound Resource
+  /api/monitor/ir/vault/token/generate:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "201":
+          description: Created
+      security:
+      - bearerAuth: []
+      summary: Generate Access Token For Vault Connection
+      tags:
+      - Inbound Resource
+  /api/monitor/jsonstructure/keyswithorder:
+    get:
+      parameters:
+      - name: appendKeyPrefix
+        in: query
+        schema:
+          type: string
+      - name: entityType
+        in: query
+        schema:
+          type: string
+      - name: id
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: tenant
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Json Structure Keys With Order
+      tags:
+      - Json Structure Resource
+  /api/monitor/logs/downloadfile:
+    get:
+      tags:
+      - Integration Logs
+      parameters:
+      - name: isTxn
+        in: query
+        schema:
+          type: boolean
+      - name: stepId
+        in: query
+        schema:
+          type: string
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      - name: type
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Download File
+  /api/monitor/logs/downloadfiles:
+    get:
+      tags:
+      - Integration Logs
+      parameters:
+      - name: isTxn
+        in: query
+        schema:
+          type: boolean
+      - name: stepId
+        in: query
+        schema:
+          type: string
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      - name: type
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Download Files
+  /api/monitor/logs/files:
+    get:
+      tags:
+      - Integration Logs
+      parameters:
+      - name: isTxn
+        in: query
+        schema:
+          type: boolean
+      - name: stepId
+        in: query
+        schema:
+          type: string
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      - name: type
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Files Information
+  /api/monitor/organization/policyconfiguration:
+    put:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: {}
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Update Policy Configuration
+      tags:
+      - Organization Resource
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Policy Configuration
+      tags:
+      - Organization Resource
+  /api/monitor/report/downloadTransactionRequest/{requestId}:
+    get:
+      parameters:
+      - name: requestId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/octet-stream: {}
+      security:
+      - bearerAuth: []
+      summary: Download Transactions To File
+      tags:
+      - Report Resource
+  /api/monitor/report/getAllDownloadRequests:
+    get:
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 1
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 20
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get All Download Requests
+      tags:
+      - Report Resource
+  /api/monitor/report/{requestId}:
+    delete:
+      parameters:
+      - name: requestId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Delete Report
+      tags:
+      - Report Resource
+  /api/monitor/serviceIds/{serviceId}/payloads/track:
+    get:
+      parameters:
+      - name: serviceId
+        in: path
+        required: true
+        schema:
+          $ref: "#/components/schemas/UUID"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Document"
+      security:
+      - bearerAuth: []
+      summary: Get Payload Details
+      tags:
+      - Track Resource
+  /api/monitor/serviceTransaction/exceptions:
+    get:
+      tags:
+      - Integration/ServiceTracking
+      parameters:
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      - name: type
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Exceptions
+  /api/monitor/serviceTransaction/getConfigStructure:
+    get:
+      parameters:
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Config Structure
+      tags:
+      - Service Transaction Resource
+  /api/monitor/serviceTransaction/retry/transaction-info/steps:
+    get:
+      tags:
+      - Integration/ServiceTracking
+      parameters:
+      - name: transactionId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Retry Transaction Info Steps
+  /api/monitor/serviceTransaction/transactions:
+    get:
+      tags:
+      - Integration/ServiceTracking
+      parameters:
+      - name: serviceId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "3"
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Transactions
+  /api/monitor/system/auditdbstats:
+    get:
+      tags:
+      - System
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Audit Dbstats
+  /api/monitor/system/designdbstats:
+    get:
+      tags:
+      - System
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Design Dbstats
+  /api/monitor/system/metrics/executions/limit:
+    get:
+      tags:
+      - System
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Limits
+  /api/monitor/system/metrics/{tenant}/executions/increment:
+    post:
+      tags:
+      - System
+      parameters:
+      - name: tenant
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ExecutionLimit"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Capture Executions
+  /api/monitor/track/services:
+    get:
+      tags:
+      - Tracking Functionality
+      parameters:
+      - name: path
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Associated Keys
+  /api/monitor/track/services/{serviceId}:
+    put:
+      tags:
+      - Tracking Functionality
+      parameters:
+      - name: serviceId
+        in: path
+        required: true
+        schema:
+          $ref: "#/components/schemas/UUID"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TrackingField"
+        required: true
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Update Service Tracking Details
+    get:
+      tags:
+      - Tracking Functionality
+      parameters:
+      - name: serviceId
+        in: path
+        required: true
+        schema:
+          $ref: "#/components/schemas/UUID"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Tracking Details
+    delete:
+      tags:
+      - Tracking Functionality
+      parameters:
+      - name: serviceId
+        in: path
+        required: true
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: componentConfigId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+        required: true
+      - name: path
+        in: query
+        schema:
+          type: string
+        required: true
+      responses:
+        "204":
+          description: No Content
+      security:
+      - bearerAuth: []
+      summary: Delete Tracking Field
+    post:
+      tags:
+      - Tracking Functionality
+      parameters:
+      - name: serviceId
+        in: path
+        required: true
+        schema:
+          $ref: "#/components/schemas/UUID"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TrackingField"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+        "400":
+          description: Bad Request
+      security:
+      - bearerAuth: []
+      summary: Add Service Tracking Details
+  /api/monitor/track/v2/services:
+    get:
+      tags:
+      - Tracking Functionality
+      parameters:
+      - name: keys
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Tracking Fields
+  /api/monitor/transaction/auditsTree:
+    get:
+      parameters:
+      - name: hasIterations
+        in: query
+        schema:
+          type: boolean
+      - name: isIteration
+        in: query
+        schema:
+          type: boolean
+      - name: isServiceInvoked
+        in: query
+        schema:
+          type: boolean
+      - name: iteration
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: noOfIterations
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "1"
+      - name: parentStepId
+        in: query
+        schema:
+          type: string
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "10"
+      - name: transactionId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Audits Tree
+      tags:
+      - Transaction Resource
+  /api/monitor/transaction/getConfigStructure:
+    get:
+      parameters:
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Config Structure
+      tags:
+      - Transaction Resource
+  /api/monitor/transaction/payload:
+    get:
+      parameters:
+      - name: modeId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: payloadId
+        in: query
+        schema:
+          type: string
+      - name: tenant
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Payload
+      tags:
+      - Payload Resource
+  /api/monitor/transaction/retry/transaction-info:
+    get:
+      parameters:
+      - name: stepId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: transactionId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Retry Transaction Info
+      tags:
+      - Transaction Resource
+  /api/monitor/transaction/retry/transaction-info/steps:
+    get:
+      parameters:
+      - name: transactionId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Retry Transaction Info Steps
+      tags:
+      - Transaction Resource
+  /api/monitor/transaction/v1/payload/downloadNodevalue:
+    get:
+      parameters:
+      - name: OnDemandKey
+        in: query
+        schema:
+          type: string
+      - name: id
+        in: query
+        schema:
+          type: string
+      - name: payloadType
+        in: query
+        schema:
+          type: string
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      - name: type
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Download Payload Tree Node Value
+      tags:
+      - Payload Resource
+  /api/monitor/transaction/v1/payload/treeviewwithvalue:
+    get:
+      parameters:
+      - name: OnDemandKey
+        in: query
+        schema:
+          type: string
+      - name: id
+        in: query
+        schema:
+          type: string
+      - name: payloadType
+        in: query
+        schema:
+          type: string
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      - name: type
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Tree Structure With Value V 1
+      tags:
+      - Payload Resource
+  /api/monitor/transaction/v2/audits:
+    get:
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "1"
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "10"
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuditResponseMongo"
+      security:
+      - bearerAuth: []
+      summary: Get Audits
+      tags:
+      - Transaction Resource
+  /api/monitor/transaction/v2/exceptions:
+    get:
+      tags:
+      - Integration/Tracking
+      parameters:
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      - name: type
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+      security:
+      - bearerAuth: []
+      summary: Get Exceptions
+  /api/monitor/transaction/v2/getTransactions:
+    get:
+      tags:
+      - Integration/Tracking
+      parameters:
+      - name: endDate
+        in: query
+        schema:
+          type: string
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "1"
+      - name: runtime
+        in: query
+        schema:
+          type: string
+      - name: searchParam
+        in: query
+        schema:
+          type: string
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "20"
+      - name: startDate
+        in: query
+        schema:
+          type: string
+      - name: status
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MonitorTransactionData"
+      security:
+      - bearerAuth: []
+      summary: Get All Transactions
+  /api/monitor/transaction/v2/transactions:
+    get:
+      tags:
+      - Integration/Tracking
+      parameters:
+      - name: endDate
+        in: query
+        schema:
+          type: string
+      - name: keys
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "1"
+      - name: searchParam
+        in: query
+        schema:
+          type: string
+      - name: serviceId
+        in: query
+        schema:
+          $ref: "#/components/schemas/UUID"
+      - name: size
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: "20"
+      - name: startDate
+        in: query
+        schema:
+          type: string
+      - name: status
+        in: query
+        schema:
+          type: string
+      - name: transactionId
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Transactions
+  /api/monitor/transaction/v2/transactions/{transactionId}:
+    get:
+      parameters:
+      - name: transactionId
+        in: path
+        required: true
+        schema:
+          $ref: "#/components/schemas/UUID"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Transaction By Id
+      tags:
+      - Transaction Resource
+  /api/monitor/transaction/v2/transactionsByParentTransactionId/{parentTxnId}:
+    get:
+      parameters:
+      - name: parentTxnId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MonitorTransaction"
+      security:
+      - bearerAuth: []
+      summary: Get Transactions By Parent Transaction Id
+      tags:
+      - Transaction Resource
+  /api/monitor/userpreferred/dataplane:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Find User Preferred Data Plane
+      tags:
+      - User Preferred Data Planes Resource
+  /api/monitor/userpreferred/getPreferredDataPlane:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Get Preferred Data Plane
+      tags:
+      - User Preferred Data Planes Resource
+  /api/monitor/userpreferred/updatedataplane:
+    put:
+      parameters:
+      - name: clusterId
+        in: query
+        schema:
+          type: string
+      - name: clusterType
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema: {}
+      security:
+      - bearerAuth: []
+      summary: Update User Preferred Data Plane
+      tags:
+      - User Preferred Data Planes Resource
+  /api/monitor/version:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+      summary: Get Latest Deployed Version
+      tags:
+      - Version Resource
+tags:
+- name: Integration Logs
+- name: Integration/Access
+- name: Integration/ServiceTracking
+- name: Integration/Tracking
+- name: System
+- name: Tracking Functionality
+info:
+  title: integration-service API
+  version: 1.16.1
